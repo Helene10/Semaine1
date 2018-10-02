@@ -1,0 +1,16 @@
+header {
+  align-items: center;
+  display: flex; 
+  justify-content: flex-end;
+  flex-direction: row;
+  margin: 1em;
+}
+
+.boutons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 1em;
+
+}
+
