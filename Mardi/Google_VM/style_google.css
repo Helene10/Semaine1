@@ -1,0 +1,179 @@
+body{
+  font-family: arial;
+}
+
+header {
+ align-items: center;
+ display: flex;
+ justify-content: flex-end;
+ flex-direction: row;
+ margin-right: 1em;
+ 
+}
+header a{
+  text-decoration: none;
+  color: black;
+  font-family: arial;
+  font-style: normal;
+}
+
+header a:hover{
+  text-decoration: underline;
+  color: grey;
+}
+
+.connexion{
+  background-color: #4d8ffb;
+  padding: 0.8em 1.2em;
+  border-radius: 2px;
+  font-style: bold;
+  color: white;
+  font-size: 10pt;
+  cursor: pointer;
+  border-style: none; 
+
+}
+button:hover{
+  cursor:pointer;
+}
+
+button:focus{
+  outline: none;
+}
+
+.head {
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-end;
+ margin: 1em;
+
+}
+
+
+.group_center{
+
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 10%
+
+}
+.logo{
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+
+.input
+{
+  width: 100%;
+  height: 2em;
+  padding-left: 1em;
+  font-size: medium;
+  box-shadow: 3px 3px 3px #AAA;
+  border-left: 1px solid #EEE;
+  border-top: 1px solid #EEE;
+  border-bottom: 0.1px solid #EEE;
+  border-right: 0.1px solid #EEE;
+}
+.input:focus{
+  outline: none;
+  box-shadow: 0px;
+  box-shadow: 3px 4px 3px #979797;
+}
+
+.input:hover{
+  box-shadow: 0px;
+  box-shadow: 3px 4px 3px #979797;
+}
+
+
+.buttons
+{
+  margin: 2em;
+  display: flex;
+
+}
+
+.button{
+  padding: 0em 10px
+}
+
+
+.buttonbas
+{
+    padding: 1em 2.5em;
+    border-radius: 2px;
+    font-weight: bold;
+    color: grey;
+    background-color:#EEE;
+    font-size: 10pt;
+    border-style: none;
+}
+.buttonbas:hover{
+  color: black;
+  border-style: solid;
+  border-radius: 2px;
+
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#france {
+  font-size: 9pt;
+  padding-left: 2.3em;
+  background: #ecf0f1;
+  height: 2.8rem;
+  width: auto;
+  border-top: 1px #bdc3c7 solid;
+  display: flex;
+  align-items: center;
+  font-family: arial; 
+  color: grey;
+}
+
+#bas {
+  background: #ecf0f1;
+  height: 2.8rem;
+  width: auto;
+  border-top: 1px solid;
+  border-color: #bdc3c7; 
+  font-family: arial; 
+  display: flex;
+  align-items: center;
+}
+
+
+footer section {
+  display: flex;
+  justify-content: space-between;
+}
+
+#bas a {
+  text-decoration: none;
+  color: grey;
+  font-size: 9pt;
+  padding: 1em;
+}
+
+#bas a:hover{
+  text-decoration: underline;
+}
+
+.gauche{
+  padding-left: 1em;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.droite {
+  padding-right: 1em;
+  display: flex;
+  justify-content: flex-end;
+}
