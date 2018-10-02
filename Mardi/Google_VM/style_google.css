@@ -56,7 +56,8 @@ button:focus{
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin: 10%
+    margin: 10%;
+
 
 }
 .logo{
@@ -93,11 +94,10 @@ button:focus{
 {
   margin: 2em;
   display: flex;
-
 }
 
 .button{
-  padding: 0em 10px
+  padding: 0em 15px
 }
 
 
@@ -113,9 +113,7 @@ button:focus{
 }
 .buttonbas:hover{
   color: black;
-  border-style: solid;
-  border-radius: 2px;
-
+  box-shadow: 1px 1px 5px #AAA
 }
 
 footer {
