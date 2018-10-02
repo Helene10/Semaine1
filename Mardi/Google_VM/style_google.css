@@ -1,0 +1,35 @@
+form
+{
+  box-shadow: 10px 5px 15px ;
+  width: 80px;
+  width: auto;
+}
+
+
+
+body
+{
+  background-color: yellow;
+}
+
+
+
+header
+{
+  border: 10px;
+background-color: blue;
+
+}
+
+
+.logo
+{
+  widht: 10%;
+}
+
+
+footer
+{
+  display: flex;
+  background-color: green;
+}
