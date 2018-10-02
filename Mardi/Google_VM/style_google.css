@@ -12,12 +12,21 @@ header {
 
 .connexion{
   background-color: #4d8ffb;
-  padding: 1em;
+  padding: 0.8em 1.2em;
   border-radius: 0.3em;
   font-style: bold;
   color: white;
+  font-size: 10pt;
+  cursor: pointer;
+
+}
+button:hover{
+  cursor:pointer;
 }
 
+button:focus{
+  outline: none;
+}
 
 .head {
  display: flex;
@@ -48,12 +57,18 @@ header {
   width: 100%;
   height: 2em;
   padding-left: 2em;
-  box-shadow: 2px 2px 3px #EEE;
   font-size: medium;
+  box-shadow: 3px 3px 3px #AAA;
+  border-style: none;
+  border-top: 1px
+}
+.input:focus{
+  outline: none;
 }
 
 .input:hover{
-  box-shadow: 2px 4px 4px #AAA;
+  box-shadow: 0px;
+  box-shadow: 3px 4px 3px #979797;
 }
 
 
@@ -75,7 +90,9 @@ header {
     border-radius: 0.3em;
     font-style: bold;
     background-color:#EEE;
+    font-size: 10pt;
 }
+
 
 
 #footer{
@@ -120,6 +137,6 @@ a{
   
 }
 
-a:hover{
+a.lienenbas:hover{
   text-decoration: underline;
 }
