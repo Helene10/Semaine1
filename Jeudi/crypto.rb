@@ -8,7 +8,7 @@ valeur.each do |i|
 end
 
 devises_et_valeurs = Hash[devises.zip valeur]
-devises_valeurs = Hash[devises.zip valeurs_sans_dollars]
+@devises_valeurs = Hash[devises.zip valeurs_sans_dollars]
 
 def give_max(devises_valeurs)
 	devises_valeurs.each do |devise, sa_valeur|
@@ -44,21 +44,37 @@ def cours_minimum_devises(hash)
 		end
 	end
 	puts "Voici toutes les devises dont le cours est inférieur à 6 000$:"
-	puts "#{@devises_cours[devise]}"
+	@devises_cours.each do |devise1, valeur1|
+		puts devise1
+	end
 end
+
 
 def mini_devise
 	@devises_cours.each do |devise, sa_valeur|
 		if sa_valeur == @devises_cours.values.max
-		puts "#{sa_valeur} est le cours le plus haut parmi les monnaies dont le cours est inférieur à 6000$"
+			puts "#{sa_valeur} est le cours le plus haut parmi les monnaies dont le cours est inférieur à 6000$"
 		end
 	end
 end
 
 ############### Réponses ###############
 
-give_max(devises_valeurs)
-give_min(devises_valeurs)
-contient_mot_coin(devises_valeurs)
-cours_minimum_devises(devises_valeurs)
-mini_devise
+def perform
+	puts ">Donne moi la crypto qui a la plus grosse valeur :"
+	give_max(@devises_valeurs)
+	puts ""
+	puts ">Donne moi la crypto qui a la plus petite valeur :"
+	give_min(@devises_valeurs)
+	puts ""
+	puts ">Combien de crypto contiennent le mot 'coin' ?"
+	contient_mot_coin(@devises_valeurs)
+	puts ""
+	puts ">Sors moi tout les devises, dont le cours est inférieur à 6000 :"
+	cours_minimum_devises(@devises_valeurs)
+	puts ""
+	puts ">Quel est le cours le plus haut parmi celle-la ?"
+	mini_devise
+end
+
+perform
