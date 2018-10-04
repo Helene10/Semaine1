@@ -1,4 +1,4 @@
-##Exercice de Jeudi 4 octobre sur les **Arrays** et les **Hash**
+## Exercice de Jeudi 4 octobre sur les **Arrays** et les **Hash**
 
 - Pauline Labaisse @Pauline Labaisse
 - Irina Penkovskaia @Ira P.
