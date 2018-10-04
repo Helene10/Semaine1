@@ -41,7 +41,7 @@ def start_upcase(table)
 	puts ">Il y a #{a} pseudo twitter commencent par une majuscule" 
 end
 
-# Méthode qui 
+# Méthode qui compte le nombre d'entrée contenant une majuscule
 def count_upcase(table)
 	puts "Combien contiennent une majuscule ?"
 	count_upcase_ = table.grep(/[A-Z]/).count
