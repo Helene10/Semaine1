@@ -4,56 +4,61 @@ valeur = ["$6558.07", "$468.95", "$0.487526", "$762.84", "$8.86", "$85.26", "$0.
 
 valeurs_sans_dollars = []
 valeur.each do |i|
-valeurs_sans_dollars << ("#{i}".delete '($)').to_f
+	valeurs_sans_dollars << ("#{i}".delete '($)').to_f
 end
 
 devises_et_valeurs = Hash[devises.zip valeur]
 devises_valeurs = Hash[devises.zip valeurs_sans_dollars]
 
-devises_valeurs.each do |devise, sa_valeur|
-	if sa_valeur == devises_valeurs.values.max
-	puts devise + " est la crypto qui a la plus grosse valeur"
-end
-end
-
-devises_valeurs.each do |devise, sa_valeur|
-	if sa_valeur == devises_valeurs.values.min
-	puts devise + " est la crypto qui a la plus faible valeur"
-end
-end
-
-
-def contient_mot_coin(hash)
-devises_coin = []
-hash.each do |devise, sa_valeur|
-  if devise.include? "coin"
-  	devises_coin << devise
-end
-end
-print devises_coin.size
-puts " devises contiennent le mot coin"
-end
-
-puts contient_mot_coin(devises_valeurs)
-
-
-
-def cours_minimum_devises(hash)
-
-@devises_cours = {}
-hash.each do |devise, sa_valeur|
-  if sa_valeur < 6000
-  	@devises_cours[devise] = sa_valeur
+def give_max(devises_valeurs)
+	devises_valeurs.each do |devise, sa_valeur|
+		if sa_valeur == devises_valeurs.values.max
+		puts devise + " est la crypto qui a la plus grosse valeur"
+		end
 	end
 end
-	puts "Voici toutes les devises dont le cours est inférieur à 6000$:"
+
+def give_min(devises_valeurs)
+	devises_valeurs.each do |devise, sa_valeur|
+		if sa_valeur == devises_valeurs.values.min
+		puts devise + " est la crypto qui a la plus faible valeur"
+		end
+	end
 end
 
-puts cours_minimum_devises(devises_valeurs)
-
-
-@devises_cours.each do |devise, sa_valeur|
-	if sa_valeur == @devises_cours.values.max
-	puts "#{sa_valeur} est le cours le plus haut parmi les monnaies dont le cours est inférieur à 6000$"
+def contient_mot_coin(hash)
+	devises_coin = []
+		hash.each do |devise, sa_valeur|
+		  if devise.include? "coin"
+		  	devises_coin << devise
+			end
+	end
+	puts "#{devises_coin.size} devises contiennent le mot coin"
 end
+
+def cours_minimum_devises(hash)
+	@devises_cours = {}
+	hash.each do |devise, sa_valeur|
+	  if sa_valeur < 6000
+	  	@devises_cours[devise] = sa_valeur
+		end
+	end
+	puts "Voici toutes les devises dont le cours est inférieur à 6 000$:"
+	puts "#{@devises_cours[devise]}"
 end
+
+def mini_devise
+	@devises_cours.each do |devise, sa_valeur|
+		if sa_valeur == @devises_cours.values.max
+		puts "#{sa_valeur} est le cours le plus haut parmi les monnaies dont le cours est inférieur à 6000$"
+		end
+	end
+end
+
+############### Réponses ###############
+
+give_max(devises_valeurs)
+give_min(devises_valeurs)
+contient_mot_coin(devises_valeurs)
+cours_minimum_devises(devises_valeurs)
+mini_devise
