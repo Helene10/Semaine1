@@ -85,7 +85,7 @@ count_upcase(journalistes)
 puts ""
 count_underscores(journalistes)
 puts ""
-#table_sort(@twitter)
+table_sort(@twitter)
 puts ""
 
 
