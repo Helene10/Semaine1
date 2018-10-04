@@ -1,4 +1,4 @@
-## Exercice de Jeudi 4 octobre sur les *Arrays* et les *Hash*. :sunny:
+## Exercice de Jeudi 4 octobre sur les *Arrays* et les *Hash*. :sunny: :poop:
 
 ### Groupe :
 
