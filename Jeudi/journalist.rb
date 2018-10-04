@@ -72,22 +72,23 @@ end
 
 
 ################ Réponses ################
-
-table_size(journalistes)
-puts ""
-count_number(journalistes)
-puts ""
-count_aude(journalistes)
-puts ""
-start_upcase(journalistes)
-puts ""
-count_upcase(journalistes)
-puts ""
-count_underscores(journalistes)
-puts ""
-table_sort(@twitter)
-puts ""
-
+def perform
+	table_size(journalistes)
+	puts ""
+	count_number(journalistes)
+	puts ""
+	count_aude(journalistes)
+	puts ""
+	start_upcase(journalistes)
+	puts ""
+	count_upcase(journalistes)
+	puts ""
+	count_underscores(journalistes)
+	puts ""
+	table_sort(@twitter)
+	puts ""
+end
+perform
 
 
 
